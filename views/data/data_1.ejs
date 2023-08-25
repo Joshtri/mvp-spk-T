@@ -24,27 +24,28 @@
         <div class="col-10 mt-5 p-5 pt-3">
             <h4 class="text-center mb-4">Data 1</h4>
 
-            <nav aria-label="breadcrumb">
+            <!-- <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="/dashboard"><i class="fa-solid fa-house-chimney mx-1" style="color: #6f8ab8;"></i>Dashboard</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Data 1</li>
-                  <!-- <li class="breadcrumb-item active" aria-current="page">Data</li> -->
+                  <li class="breadcrumb-item active" aria-current="page"><i class="fa-solid fa-house-chimney mx-1" style="color: #6f8ab8;"></i>Data 1</li>
+                  <li class="breadcrumb-item active" aria-current="page">Data</li>
                 </ol>
-            </nav>
+            </nav> -->
 
             <div class="card mb-5">
                 <div class="card-body">
                     <div class="mb-2">
-                        <button class="btn btn-outline-success btn-sm"><i class="fa-solid fa-square-plus mx-1"></i>Tambah Data</button>
+                        <a href="/data/add_data_1">
+                            <button class="btn btn-outline-success btn-sm"><i class="fa-solid fa-square-plus mx-1"></i>Tambah Data</button>
+                        </a>
                     </div>
                     
                     <div class="dropdown d-flex">
-                        <a href="" class=" btn btn-outline-light mb-3 link-opacity-50-hover link-offset-2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear" style="color: #94b1f5;"></i></a>
+                        <a href="" class=" btn btn-sm btn-outline-light mb-3 link-opacity-50-hover link-offset-2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear" style="color: #94b1f5;"></i></a>
 
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu dropdown-menu-sm-start">
                             <li><a class="dropdown-item" href="#">Export</a></li>
                             <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalImport">Import</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Cetak PDF</a></li>
                           </ul>
                     </div>
                 </div>
@@ -119,5 +120,7 @@
             $('#dataTable').DataTable();
         } );
     </script>
+
+    <%- include('delete/delete_data_1'); %>
 </body>
 </html>
